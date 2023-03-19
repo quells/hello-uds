@@ -17,7 +17,7 @@ void handle_conn(int cli_fd, char *buf);
 int main(int argc, char **argv) {
     int exit_code = EXIT_SUCCESS;
     int sock_fd, cli_fd;
-    char *buf;
+    char *buf = NULL;
 
     if ((sock_fd = socket(PF_UNIX, SOCK_STREAM, 0)) < 0) {
         perror("socket");
